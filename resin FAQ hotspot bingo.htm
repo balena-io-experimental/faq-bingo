@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///Users/chriswilkes/resin/index-resin.html -->
+<html><!-- Mirrored from docs.resin.io/learn/welcome/introduction/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jun 2018 09:05:06 GMT --><!-- Added by HTTrack --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- /Added by HTTrack -->
+
+    
+    <title>resin FAQ hotspot bingo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://docs.resin.io/favicon.png">
+
+    <meta property="fb:app_id" content="221218511385682">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Welcome to resin.io - Resin.io Documentation">
+
+    <meta property="og:image" content="https://docs.resin.io/img/docs-preview.png">
+    <link rel="stylesheet" href="./resin FAQ hotspot bingo_files/style.css">
+    <!-- Algolia search styles -->
+    <link rel="stylesheet" href="./resin FAQ hotspot bingo_files/docsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="file:///Users/chriswilkes/resin/bingo.css">
+    <link rel="image_src" href="https://www.bullshitbingo.net/parts/img/bsbingo.png">
+
+    <script src="./resin FAQ hotspot bingo_files/tracker.js"></script><script type="text/javascript" async="" src="./resin FAQ hotspot bingo_files/mixpanel-2-latest.min.js"></script><script async="" src="./resin FAQ hotspot bingo_files/analytics.js"></script><script type="text/javascript">
+    var faqs = [];
+
+    function click(){
+    var gps=[[0,6],[4,4],[0,1],[5,1],[10,1],[15,1],[20,1],[0,5],[1,5],[2,5],[3,5],[4,5]],
+    clicks=['freecell','win','clicked'],
+    cells=this.pTable.getElementsByTagName('td'),
+    wins=[];
+    if(clicks.indexOf(this.className)>0){
+    this.title='Click to mark cell';this.className='';
+    var index = faqs.indexOf(this.innerHTML);
+    if (index > -1) {
+      faqs.splice(index, 1);
+    }
+
+    }
+    else{
+    this.title='Click to unmark cell';this.className='clicked';
+
+    faqs.push(this.innerHTML);
+    console.log(faqs);
+    }
+    for(var ol=0;(g=gps[ol]);ol++){
+    var cnt=0;
+    for(var i=0,cell;i<6&&(cell=cells[g[0]+(i*g[1])]);i++){
+      id=clicks.indexOf(cell.className);
+
+    if(id>=0){
+      cnt++;if(id==1)cell.className='clicked';
+
+    }
+    }
+    if(cnt==6)wins.push(g);
+    }
+    if(wins.length)
+    for(var ol=0;
+      (g=wins[ol]);ol++)
+      for(var i=0;i<6;i++)
+      cells[g[0]+(i*g[1])].className='win';
+
+    }
+
+    function enable_clicks(){
+    var tbls=document.getElementsByTagName('table');
+    for(var t=0,tbl;(tbl=tbls[t]);t++){
+    if(tbl.className='card'){
+      var tds=tbl.getElementsByTagName('td');
+    for(var i=0,td;(td=tds[i]);i++){
+    td.pTable=tbl;
+    if(td.className!='freecell'){
+      td.title='Click to mark cell';td.onclick=click;
+    }
+    }
+    }
+    }
+    }
+
+    function loader(func){
+      if(document.addEventListener){window.addEventListener("load",func,false);}
+      else if(document.attachEvent){window.attachEvent("onload",func);}
+      else{if(!window._onload_queue){window._onload_queue=[];if(window.onload)window._onload_queue.push(window.onload);}window._onload_queue.push(func);}}
+      loader(enable_clicks);
+
+    </script>
+
+<script type="text/javascript">
+// Find a <table> element with id="myTable":
+function addRow(){
+
+  var table = document.getElementById("table1");
+
+  // Create an empty <tr> element and add it to the 1st position of the table:
+  var row = table.insertRow();
+
+  // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell1 = row.insertCell(2);
+  var cell2 = row.insertCell(3);
+  var cell1 = row.insertCell(4);
+  var cell2 = row.insertCell(5);
+  // Add some text to the new cells:
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+
+}
+function editMeeting(text){
+  var title = document.getElementById("meetingTitle");
+  title.innerHTML(text);
+}
+
+function editText() {
+    document.getElementById("meetingTitle").contentEditable = true;
+    // document.getElementById("demo").innerHTML = "customer /resin check-in";
+}
+</script>
+  <style type="text/css"></style></head>
+  <body data-spy="scroll" data-target=".in-page-nav">
+
+
+    <!-- regular nav -->
+<div class="menu menu--top">
+  <div class="container">
+    <nav class="menu__nav navbar" role="navigation">
+      <a class="menu__logo navbar-brand" href="https://resin.io/">
+        <span class="logo">
+          <img class="logo__img" src="./resin FAQ hotspot bingo_files/logo.svg">
+          <span class="logo__text">resin.io</span>
+        </span>
+      </a>
+
+      <ul class="menu__items nav navbar-nav navbar-left" id="headerList">
+
+          <li class="menu__item">
+            <a> FAQ hotspot bingo</a>
+          </li>
+
+
+
+
+      </ul>
+
+      <ul class="menu__items nav navbar-nav navbar-left" id="headerList">
+        <li class="menu__item">
+          <a id="meetingTitle" onclick="editText()"> customer / resin check-in</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- mobile nav -->
+
+<script id="tpl-mobile-top-menu" type="text/html">
+  <div class="navbar-header">
+    <a class="menu__logo navbar-brand" href="https://resin.io/">
+      <span class="logo">
+        <img class="logo__img" src="https://docs.resin.io/img/logo.svg">
+        <span class="logo__text">resin.io</span>
+      </span>
+    </a>
+
+    <a class="btn btn-primary"
+      href="https://dashboard.resin.io/signup">SIGN UP</a>
+
+    <button type="button" class="navbar-toggle"
+      on-click="toggle('collapsed')">
+
+        <span class="icon-bar [[ !collapsed ? 'active' : '' ]]"></span>
+
+        <span class="icon-bar [[ !collapsed ? 'active' : '' ]]"></span>
+
+        <span class="icon-bar [[ !collapsed ? 'active' : '' ]]"></span>
+
+    </button>
+  </div>
+  <!-- [[^collapsed]]
+    <div class="navbar-collapse">
+      <ul class="nav">
+
+          <li>
+            <a href="https://resin.io/usecases">What it&#39;s for</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/how-it-works">How it works</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/community">Community</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/blog">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/pricing">Pricing</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/team">Team</a>
+          </li>
+
+          <li>
+            <a href="https://resin.io/contact">Contact</a>
+          </li>
+
+      </ul>
+    </div>
+  [[/collapsed]] -->
+</script>
+
+
+
+<nav class="navbar navbar-default navbar--mobile" id="ract-mobile-top-menu"><div class="navbar-header"><a class="menu__logo navbar-brand" href="https://resin.io/"><span class="logo"><img class="logo__img" src="./resin FAQ hotspot bingo_files/logo.svg"> <span class="logo__text">resin.io</span></span></a> <a class="btn btn-primary" href="https://dashboard.resin.io/signup">SIGN UP</a> <button class="navbar-toggle" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div> </nav>
+
+<nav class="navbar navbar-submenu navbar--mobile" id="ract-mobile-sub-menu"></nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sidebar">
+          <div class="search-wrapper js-sticky-header">
+            <form action="https://docs.resin.io/search-results">
+  <!-- <input name="searchTerm" type="text" class="form-control" placeholder="Search Docs..." value=""> -->
+</form>
+
+          </div>
+<br>
+
+
+
+<nav class="site-navigation">
+  <ul class="nav nav-tabs nav-justified">
+
+
+
+
+
+      <li class="active">
+        <a href="file:///Users/chriswilkes/resin/index-resin.html#tab-learn" data-toggle="tab">
+          FAQs
+        </a>
+      </li>
+
+
+
+
+      <!-- <li class="">
+        <a href="#tab-faq" data-toggle="tab">
+          Issues
+        </a>
+      </li> -->
+
+
+
+
+      <!-- <li class="">
+        <a href="#tab-reference" data-toggle="tab">
+          Use/Stack
+        </a>
+      </li> -->
+
+  </ul>
+
+  <div class="tab-content">
+
+
+
+
+      <div class="tab-pane active" id="tab-learn">
+
+  <div class="nav-menu">
+
+      <h3 class="
+        with-children
+        active
+      ">
+        <a href="file:///Users/chriswilkes/resin/index-resin.html">
+          Bingo
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav expand">
+
+
+
+      <li class="active">
+        <a href="file:///Users/chriswilkes/resin/index-resin.html">
+          Add participants
+        </a>
+      </li>
+
+      <li class="active">
+
+        <a onclick="editTopic()">
+          Edit topic
+        </a>
+      </li>
+
+        <li class="active">
+
+          <a onclick="addRow()">
+            Add row
+          </a>
+        </li>
+
+          <div class="in-page-nav">
+            <ul class="nav expand">
+
+            </ul>
+          </div>
+
+
+        <li class="active">
+          <a onclick="addRow()">
+            Remove row
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/learn/develop/integrations/aws">
+            Amazon AWS IoT
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/learn/develop/integrations/bluemix">
+            IBM Bluemix
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/learn/develop/integrations/azure">
+            Microsoft Azure
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/learn/develop/integrations/artik">
+            Samsung ARTIK Cloud
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+    
+
+
+
+
+
+
+
+  </div>
+
+      </div>
+
+
+
+
+      <div class="tab-pane " id="tab-faq">
+
+  <div class="nav-menu">
+
+      <h3 class="
+
+
+      ">
+        <a href="https://docs.resin.io/faq/troubleshooting/faq">
+          FAQs
+        </a>
+      </h3>
+
+
+
+
+      <h3 class="">
+        <a href="https://docs.resin.io/faq/troubleshooting/troubleshooting">
+          Troubleshooting
+        </a>
+      </h3>
+
+
+
+
+  </div>
+
+      </div>
+
+
+
+
+      <div class="tab-pane " id="tab-reference">
+
+  <div class="nav-menu">
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/hardware/devices">
+          Supported devices
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/hardware/devices">
+            Single-board computers
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/hardware/wifi-dongles">
+            Supported WiFi adapters
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/resinOS/overview/2.x">
+          resinOS
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/overview/2.x">
+            What is resinOS?
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/updates/self-service">
+            Host OS updates
+          </a>
+        </li>
+
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/updates/self-service">
+            Self-service updates
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/updates/update-process">
+            Update process details
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/updates/migrate-to-2.0">
+            Moving to resinOS 2.x
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/network/2.x">
+            Network
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/time">
+            Time management
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/advanced">
+            Advanced boot settings
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/resinOS/meta-resin">
+            Custom board support
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/supervisor/supervisor-api">
+          Device supervisor
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/supervisor/supervisor-api">
+            Supervisor API
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/supervisor/bandwidth-reduction">
+            Reduce bandwidth usage
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/supervisor/docker-compose">
+            docker-compose.yml fields
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/base-images/resin-base-images">
+          Base images
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/base-images/resin-base-images">
+            Resin.io base images
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/base-images/devicetypes">
+            Machine names and architectures
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/base-images/custom-docker-base-images">
+            Custom base images
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/api/overview">
+          API
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/api/overview">
+            Overview
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/api/resources/application">
+            Resources
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+      <h3 class="
+
+
+      ">
+        <a href="https://docs.resin.io/reference/cli">
+          CLI
+        </a>
+      </h3>
+
+
+
+
+      <h3 class="
+        with-children
+
+      ">
+        <a href="https://docs.resin.io/reference/sdk/node-sdk">
+          SDKs
+        </a>
+      </h3>
+
+
+
+
+
+    <ul class="nav ">
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/sdk/node-sdk">
+            Node.js SDK
+          </a>
+        </li>
+
+
+
+
+
+
+
+
+        <li class="">
+          <a href="https://docs.resin.io/reference/sdk/python-sdk">
+            Python SDK
+          </a>
+        </li>
+
+
+
+
+
+    </ul>
+
+
+
+  </div>
+
+      </div>
+
+  </div>
+</nav>
+
+        </div>
+        <article>
+          <div class="header-wrapper">
+            <header class="js-sticky-header">
+
+
+            </header>
+          </div>
+          <div class="content-wrapper">
+            <div class="page-content-wrapper">
+
+                <!-- <a
+                  target="_blank"
+                  href="https://github.com/resin-io/docs/edit/master/pages/learn/welcome/introduction.md"
+                  class="improve-docs btn btn-info">
+                  <span class="glyphicon glyphicon-edit"></span>
+                  Send it!</a> -->
+
+
+              <section class="page-content">
+
+<br>
+
+
+                <table class="card" id="table1" border="1" cellspacing="0">
+                  <tbody><tr>
+                    <td title="Click to mark cell">How do you compare to AWS Greengrass or Azure IoT Edge?</td>
+                    <td title="Click to mark cell">Why wouldn’t I just use Chef, Puppet or Ansible?</td>
+                    <td title="Click to mark cell">Resin.io’s per device subscription fees are too high for me</td>
+                    <td title="Click to mark cell">Tell me about your customer base and the verticals you see most.</td>
+                    <td title="Click to mark cell">How long has resin.io been in business?</td>
+                    <td title="Click to mark cell">What is the CPU overhead of running an application in a resin-managed environment? Does Docker add significant overhead?</td>
+
+                  </tr>
+                  <tr>
+                    <td title="Click to mark cell">What happens if resin.io goes out of business?</td>
+                    <td title="Click to mark cell">Does resin.io offer 24/7 support? How much does it cost?</td>
+                    <td title="Click to unmark cell" class="clicked">Can I run resin.io on-premises? What does it cost?</td>
+                    <td title="Click to unmark cell" class="clicked">Does resin.io have an SLA?</td>
+                    <td title="Click to unmark cell" class="clicked">Does resin.io offer discounts?</td>
+                    <td title="Click to mark cell">Can I run multiple applications on a single device?</td>
+
+                  </tr>
+                  <tr>
+                    <td title="Click to mark cell">How much does custom device support cost?</td>
+                    <td title="Click to mark cell">Why does custom device support cost so much? Why is there a recurring component to it?</td>
+                    <td title="Click to mark cell">How do host OS updates work in resin.io? What can be updated without a restart/reboot?</td>
+                    <td title="Click to mark cell">Can more than one user manage the same fleet of devices? Is there a way to assign access control to users in my organization?</td>
+                    <td title="Click to mark cell">What is the largest fleet managed by resin.io? </td>
+                    <td title="Click to mark cell">Do I have to use the resin.io dashboard to manage my devices and applications? </td>
+
+                  </tr>
+                  <tr>
+                    <td title="Click to mark cell">What are the differences between balena and Docker? Is balena Docker-compatible? </td>
+                    <td title="Click to mark cell">My device already has a Linux host operating system and I can't change that. How can I run the resin.io services without running resinOS?</td>
+                    <td title="Click to mark cell">What ports are open in a resin-managed device?</td>
+                    <td title="Click to mark cell">How can I add a device driver to my device? Is it possible to load drivers, kernel modules, or firmware within a container?</td>
+                    <td title="Click to mark cell">Is there a way to update resin-managed devices without an Internet connection? Can I use my phone or a USB stick to update devices?</td>
+                    <td title="Click to mark cell">Can I manage microcontrollers or other non-Linux devices via resin.io?</td>
+
+
+                </tr></tbody></table>
+
+
+                <hr>
+
+              </section>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script src="./resin FAQ hotspot bingo_files/main.js"></script>
+    <!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45671959-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- start Mixpanel -->
+<script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("99eec53325d4f45dd0633abd719e3ff1");</script>
+<!-- end Mixpanel -->
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    mixpanel.track('Docs', { page: location.href });
+  });
+</script>
+
+<!-- GoSquared -->
+<script>
+  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+  d.src='http://d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+  insertBefore(d,q)}(window,document,'script','_gs');
+
+  _gs('GSN-831588-U');
+</script>
+
+    <script type="text/javascript" src="./resin FAQ hotspot bingo_files/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+ apiKey: '0241ef4553148339721381e68044f60f',
+ indexName: 'resin_io',
+ inputSelector: 'input[name=searchTerm]'
+});
+</script>
+
+  
+
+<!-- Mirrored from docs.resin.io/learn/welcome/introduction/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jun 2018 09:05:06 GMT -->
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

@@ -1,0 +1,166 @@
+/**
+   Layout for on-screen and on-line gameplay w/active elements.
+
+   Copyright 2003, 2012 Karl Geiger, all rights reserved.
+*/
+
+body {
+    color: Navy;
+    background-color : White;
+    font-family : Helvetica, Verdana, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    background-color: Navy;
+    color: White;
+    border: Navy;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+}
+
+textarea, input {
+    font-family: monospace;
+    font-size:   10pt;
+}
+
+strong {
+    color : Red;
+}
+.markedcell {
+    background-image: url('_img/token.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bingocard {
+    background-color: navy;
+    color: white;
+    border-radius: 15px;
+    padding: 1em 1em 1em 1em;
+} .bingocard table {
+    border-style: solid;
+    border-color: navy;
+    border-width: 1px;
+    border-spacing: 0px;
+    padding: 0px;
+    margin: auto;
+} .bingocard th {
+    width: 120px;
+    border-style: solid;
+    border-color: navy;
+    border-width: 1px;
+    background: navy;
+} .bingocard td {
+    width: 120px;
+    height: 120px;
+    border-style: solid;
+    border-color: navy;
+    border-width: 1px;
+    background: white;
+    color: navy;
+    text-align: center;
+    vertical-align: center;
+} .bingocard td:hover {
+    background-color: LightBlue;
+} .bingocard td:active {
+    background-color: yellow;
+}
+
+.cardheader {
+    font-size: 48pt;
+    line-height: 90%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+.vocabtable {
+   text-align: center;
+   vertical-align: center;
+   width: 30%;
+}.vocabtable td {
+}
+
+.adboxtop {
+    border: 2px solid navy;
+    margin-bottom: 0;
+    border-radius: 7px 7px 0 0;
+}.adboxmiddle {
+    border-left: 2px solid navy;
+    border-right: 2px solid navy;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1ex;
+    padding-top: 1ex;
+}.adboxend {
+    border-left: 2px solid navy;
+    border-right: 2px solid navy;
+    border-bottom : 2px solid navy;
+    border-radius: 0 0 7px 7px;
+    margin-top: 0;
+    padding-top: 1ex;
+    padding-left: 1ex;
+    padding-bottom: 1ex;
+} ul.adboxmiddle,
+  ul.adboxend {
+    padding-left: 2em;
+} h1.adboxtop, h2.adboxtop, h3.adboxtop {
+      margin-top: 0;
+}
+
+.note {
+    font-style: italic;
+    font-size : smaller;
+}
+
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.center {
+    text-align: center;
+}
+.whitelink {
+    text-decoration: none;
+    color: white;
+}
+
+.headandfoot {
+    width : 96%;
+    margin: 0 auto 0 auto;
+    clear : both
+}
+
+
+#main {
+    width: 96%;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+#adcolumn {
+    float: left; 
+    width: 175px;
+}
+
+#gamecolumn {
+    float: none;
+    width: auto;
+    margin-left: 190px;
+}
+
+#content {
+    float: none;
+    width: auto;
+    margin-left: 190px;
+}
+
+#thecard {
+    max-width: 660px;
+}
+#custominput {
+    max-width: 525px;
+}
